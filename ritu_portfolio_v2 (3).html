@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ritu Yadav — Social Media & Marketing Manager</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#06060A;--bg2:#0C0E15;--surf:#131620;--surf2:#191D2A;
+  --line:rgba(255,255,255,0.07);--line-a:rgba(232,160,40,0.22);
+  --amber:#E8A028;--amber-l:#F5B83C;--amber-d:rgba(232,160,40,0.1);
+  --green:#34C759;--purple:#BF5AF2;--red:#FF453A;
+  --t1:#F4F2ED;--t2:#8A8782;--t3:#47443F;
+  --mono:'DM Mono',monospace;--sans:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;
+  --max:1160px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--t1);font-family:var(--body);font-size:16px;line-height:1.6;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 2.5rem;background:rgba(6,6,10,0.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.logo{font-family:var(--mono);font-size:0.78rem;color:var(--amber);text-decoration:none;letter-spacing:0.14em;text-transform:uppercase}
+.nav-r{display:flex;align-items:center;gap:2.5rem}
+.nav-l{display:flex;gap:1.75rem;list-style:none}
+.nav-l a{font-family:var(--mono);font-size:0.68rem;color:var(--t3);text-decoration:none;text-transform:uppercase;letter-spacing:0.09em;transition:color .2s}
+.nav-l a:hover{color:var(--t1)}
+.avail{display:flex;align-items:center;gap:0.45rem;font-family:var(--mono);font-size:0.68rem;color:var(--green);text-transform:uppercase;letter-spacing:0.07em}
+.avail-dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 7px var(--green);animation:blink 2.2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:8rem 2.5rem 5rem;max-width:var(--max);margin:0 auto;position:relative}
+.hero-tag{font-family:var(--mono);font-size:0.72rem;color:var(--t3);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:1.75rem;display:flex;align-items:center;gap:0.75rem}
+.hero-tag::before{content:'';display:block;width:32px;height:1px;background:var(--amber)}
+h1.name{font-family:var(--sans);font-size:clamp(4.5rem,13.5vw,11rem);font-weight:700;line-height:0.88;letter-spacing:-0.045em;margin-bottom:2.25rem}
+h1.name em{font-style:normal;color:var(--amber)}
+.hero-cols{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;margin-bottom:2.75rem}
+.hero-role-block{}
+.hero-role{font-family:var(--sans);font-size:1.15rem;font-weight:600;color:var(--t1);line-height:1.35;margin-bottom:0.4rem}
+.hero-loc{font-family:var(--mono);font-size:0.7rem;color:var(--t3);letter-spacing:0.06em}
+.hero-stmt{font-size:0.9625rem;color:var(--t2);line-height:1.8;border-left:2px solid var(--amber);padding-left:1.25rem}
+.hero-stmt strong{color:var(--t1);font-weight:600}
+
+/* Hero Metrics */
+.h-metrics{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:2.25rem}
+.hm{padding:1.1rem 1.4rem;border-right:1px solid var(--line);position:relative;overflow:hidden;transition:background .25s}
+.hm:last-child{border-right:none}
+.hm:hover{background:var(--surf)}
+.hm::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--amber),transparent);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.hm:hover::after{transform:scaleX(1)}
+.hm-n{font-family:var(--mono);font-size:1.65rem;font-weight:500;color:var(--amber);display:block;margin-bottom:.2rem;line-height:1}
+.hm-l{font-family:var(--mono);font-size:.6rem;color:var(--t3);text-transform:uppercase;letter-spacing:.07em}
+.hero-ctas{display:flex;gap:.9rem;flex-wrap:wrap}
+.cta-a{padding:.7rem 1.85rem;background:var(--amber);color:#000;border-radius:6px;text-decoration:none;font-family:var(--sans);font-weight:700;font-size:.875rem;letter-spacing:.01em;transition:all .2s;display:inline-flex;align-items:center;gap:.45rem}
+.cta-a:hover{background:var(--amber-l);transform:translateY(-2px)}
+.cta-b{padding:.7rem 1.85rem;border:1px solid var(--line);color:var(--t2);border-radius:6px;text-decoration:none;font-family:var(--sans);font-weight:500;font-size:.875rem;transition:all .2s}
+.cta-b:hover{border-color:var(--amber);color:var(--t1)}
+.scroll-hint{position:absolute;bottom:2rem;left:0;font-family:var(--mono);font-size:.62rem;color:var(--t3);text-transform:uppercase;letter-spacing:.14em;display:flex;align-items:center;gap:.6rem}
+.scroll-hint::after{content:'';display:block;width:32px;height:1px;background:linear-gradient(90deg,var(--t3),transparent)}
+
+/* MARQUEE */
+.marquee-wrap{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2);overflow:hidden;padding:.7rem 0}
+.marquee-t{display:flex;width:max-content;animation:mq 22s linear infinite}
+.marquee-t:hover{animation-play-state:paused}
+.mi{font-family:var(--mono);font-size:.68rem;color:var(--t3);text-transform:uppercase;letter-spacing:.1em;padding:0 2rem;white-space:nowrap}
+.mi.a{color:var(--amber)}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* SECTION LAYOUT */
+.s-wrap{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:130px 1fr;gap:3rem}
+.s-num{font-family:var(--mono);font-size:.68rem;color:var(--t3);text-transform:uppercase;letter-spacing:.09em;padding-top:.7rem;line-height:1.4}
+section{padding:5rem 2.5rem}
+section.alt{background:var(--bg2)}
+section.alt2{background:var(--surf)}
+.sub-lbl{font-family:var(--mono);font-size:.68rem;color:var(--amber);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem}
+h2{font-family:var(--sans);font-size:clamp(1.85rem,3.5vw,3rem);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-bottom:.6rem}
+h3{font-family:var(--sans);font-weight:600;letter-spacing:-.01em}
+
+/* ABOUT */
+.manifesto{font-size:1.075rem;line-height:1.9;color:var(--t2);margin-top:1.75rem;max-width:640px}
+.manifesto strong{color:var(--t1);font-weight:600}
+.brand-pills{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.75rem}
+.bp{padding:.3rem .85rem;border:1px solid var(--line);border-radius:100px;font-family:var(--mono);font-size:.68rem;color:var(--t2);letter-spacing:.04em;transition:all .2s;cursor:default}
+.bp:hover{border-color:var(--amber);color:var(--amber)}
+.info-chips{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.25rem}
+.ic{padding:.3rem .8rem;border:1px solid var(--line);border-radius:6px;font-size:.78rem;color:var(--t2)}
+
+/* BIG RESULTS */
+.results-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:2.25rem}
+.rb{background:var(--bg);padding:1.75rem 1.85rem;transition:background .25s}
+.rb:hover{background:var(--surf)}
+.rb-n{font-family:var(--mono);font-size:2.2rem;font-weight:500;color:var(--amber);display:block;margin-bottom:.35rem;line-height:1}
+.rb-l{font-size:.85rem;color:var(--t2);font-weight:500;margin-bottom:.12rem}
+.rb-c{font-family:var(--mono);font-size:.62rem;color:var(--t3)}
+
+/* EXPERIENCE */
+.exp-list{margin-top:2rem}
+.ec{border-top:1px solid var(--line);padding:2rem 0;display:grid;grid-template-columns:195px 1fr;gap:3rem}
+.ec:last-child{border-bottom:1px solid var(--line)}
+.ec-co{font-family:var(--sans);font-weight:700;font-size:.92rem;color:var(--amber);margin-bottom:.3rem}
+.ec-date{font-family:var(--mono);font-size:.66rem;color:var(--t3);letter-spacing:.04em}
+.ec-badge{display:inline-block;margin-top:.45rem;padding:.15rem .5rem;border-radius:4px;background:rgba(52,199,89,.1);border:1px solid rgba(52,199,89,.2);font-family:var(--mono);font-size:.58rem;color:var(--green);text-transform:uppercase;letter-spacing:.06em}
+.ec-role{font-family:var(--sans);font-size:1.05rem;font-weight:600;margin-bottom:.7rem}
+.ec-ul{list-style:none}
+.ec-ul li{color:var(--t2);font-size:.895rem;line-height:1.68;margin-bottom:.4rem;padding-left:1rem;position:relative}
+.ec-ul li::before{content:'—';position:absolute;left:0;color:var(--amber);font-size:.72rem;top:.2em}
+.ec-ul strong{color:var(--t1);font-weight:600}
+.fl-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}
+.fl-c{border:1px solid var(--line);border-radius:8px;padding:1.2rem 1.4rem;background:var(--surf);transition:border-color .2s}
+.fl-c:hover{border-color:var(--line-a)}
+.fl-c-t{font-family:var(--sans);font-size:.875rem;font-weight:600;color:var(--t1);margin-bottom:.35rem}
+.fl-c p{font-size:.82rem;color:var(--t2);line-height:1.6}
+
+/* LIVE ADS */
+.ads-sum{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:1.75rem}
+.as-item{background:var(--surf);padding:1rem 1.25rem}
+.as-n{font-family:var(--mono);font-size:1.45rem;font-weight:500;display:block;margin-bottom:.18rem;line-height:1}
+.as-item:nth-child(1) .as-n{color:var(--green)}
+.as-item:nth-child(2) .as-n{color:var(--amber)}
+.as-item:nth-child(3) .as-n{color:var(--purple)}
+.as-item:nth-child(4) .as-n{color:var(--amber)}
+.as-l{font-family:var(--mono);font-size:.6rem;color:var(--t3);text-transform:uppercase;letter-spacing:.07em}
+.t-panel{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:1.25rem}
+.t-hdr{padding:.8rem 1.2rem;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.015)}
+.t-hdr-l{font-family:var(--mono);font-size:.65rem;color:var(--t2);text-transform:uppercase;letter-spacing:.08em;display:flex;align-items:center;gap:.45rem}
+.ldot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green)}
+.t-hdr-r{font-family:var(--mono);font-size:.6rem;color:var(--t3)}
+.dtbl{width:100%;border-collapse:collapse;font-size:.775rem}
+.dtbl th{padding:.58rem 1rem;text-align:left;font-family:var(--mono);font-size:.58rem;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;font-weight:500;border-bottom:1px solid var(--line);background:rgba(255,255,255,.01);white-space:nowrap}
+.dtbl th.r,.dtbl td.r{text-align:right}
+.dtbl td{padding:.68rem 1rem;border-bottom:1px solid rgba(255,255,255,.03);vertical-align:middle;color:var(--t2);white-space:nowrap}
+.dtbl tr:last-child td{border-bottom:none}
+.dtbl tr:hover td{background:rgba(255,255,255,.02)}
+.cn{color:var(--t1);font-weight:500;font-size:.795rem}
+.rb2{display:inline-flex;align-items:center;padding:.17rem .52rem;border-radius:4px;font-family:var(--mono);font-size:.72rem;font-weight:500}
+.rh{background:rgba(52,199,89,.1);color:var(--green);border:1px solid rgba(52,199,89,.2)}
+.rm{background:rgba(232,160,40,.1);color:var(--amber);border:1px solid rgba(232,160,40,.18)}
+.rl{background:rgba(71,68,63,.15);color:var(--t3);border:1px solid rgba(71,68,63,.2)}
+.re{background:rgba(191,90,242,.12);color:var(--purple);border:1px solid rgba(191,90,242,.28);animation:gep 2s ease-in-out infinite}
+@keyframes gep{0%,100%{box-shadow:none}50%{box-shadow:0 0 9px rgba(191,90,242,.3)}}
+.rna{color:var(--t3);font-family:var(--mono);font-size:.7rem}
+.tr-tot td{background:rgba(232,160,40,.05) !important;font-weight:600;border-top:1px solid rgba(232,160,40,.15) !important}
+.tr-tot .cn{color:var(--amber)}
+.rdot{display:inline-flex;align-items:center;gap:.3rem;font-family:var(--mono);font-size:.7rem}
+.rdot::before{content:'';display:block;width:4px;height:4px;border-radius:50%;background:var(--amber);flex-shrink:0}
+.vl{color:var(--t1);font-weight:500}
+.note-txt{font-family:var(--mono);font-size:.7rem;color:var(--t3);margin-top:.75rem;line-height:1.65;padding:0 .2rem}
+.note-txt strong{color:var(--purple)}
+
+/* CASE STUDIES */
+.cases{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2.25rem}
+.cc{border:1px solid var(--line);border-radius:12px;padding:1.85rem;transition:border-color .3s,transform .3s;background:var(--surf)}
+.cc:hover{border-color:var(--line-a);transform:translateY(-3px)}
+.cc.w{grid-column:span 2;display:grid;grid-template-columns:1.15fr 1fr;gap:2.5rem;align-items:center}
+.cc-eye{font-family:var(--mono);font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:var(--amber);margin-bottom:.6rem}
+.cc-t{font-family:var(--sans);font-size:1.15rem;font-weight:700;margin-bottom:.55rem;letter-spacing:-.01em;line-height:1.25}
+.cc-d{font-size:.875rem;color:var(--t2);line-height:1.7;margin-bottom:1.2rem}
+.cc-nums{display:flex;gap:1.75rem;flex-wrap:wrap}
+.ccn span:first-child{font-family:var(--mono);font-size:1.35rem;font-weight:500;color:var(--amber);display:block}
+.ccn span:last-child{font-size:.62rem;color:var(--t3);text-transform:uppercase;letter-spacing:.05em}
+.big-grid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.bg-item{padding:.95rem;border:1px solid var(--line);border-radius:8px;background:var(--bg2)}
+.bg-item span:first-child{font-family:var(--mono);font-size:1.65rem;font-weight:500;color:var(--amber);display:block;margin-bottom:.15rem}
+.bg-item span:last-child{font-size:.62rem;color:var(--t3);text-transform:uppercase;letter-spacing:.05em}
+.cc-tags{display:flex;gap:.3rem;flex-wrap:wrap;margin-top:1.2rem}
+.cct{padding:.18rem .52rem;border:1px solid var(--line);border-radius:4px;font-size:.62rem;color:var(--t3);font-family:var(--mono)}
+
+/* SKILLS */
+.skills-body{margin-top:2rem}
+.sk-row{border-top:1px solid var(--line);padding:1.1rem 0;display:grid;grid-template-columns:175px 1fr;gap:2rem;align-items:start}
+.sk-row:last-child{border-bottom:1px solid var(--line)}
+.sk-cat{font-family:var(--mono);font-size:.65rem;color:var(--t3);text-transform:uppercase;letter-spacing:.09em;padding-top:.2rem}
+.sk-tags{display:flex;flex-wrap:wrap;gap:.38rem}
+.sk{padding:.28rem .72rem;border:1px solid var(--line);border-radius:5px;font-size:.79rem;color:var(--t2);font-weight:500;transition:all .2s;cursor:default}
+.sk:hover{border-color:var(--amber);color:var(--t1);background:var(--amber-d)}
+
+/* CONTACT */
+.ct-wrap{max-width:680px}
+.ct-wrap>p{color:var(--t2);font-size:.975rem;margin-bottom:2.25rem;line-height:1.8}
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:1.75rem}
+.ct-item{background:var(--surf);padding:1rem 1.4rem;display:flex;align-items:center;gap:.7rem;text-decoration:none;transition:background .2s}
+.ct-item:hover{background:var(--surf2)}
+.ct-icon{width:30px;height:30px;border-radius:7px;background:var(--amber-d);display:flex;align-items:center;justify-content:center;font-size:.8rem;flex-shrink:0}
+.ct-info{}
+.ct-lbl{font-family:var(--mono);font-size:.58rem;color:var(--t3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.12rem}
+.ct-val{font-size:.85rem;color:var(--t1);font-weight:500}
+
+/* FOOTER */
+footer{padding:1.75rem 2.5rem;border-top:1px solid var(--line)}
+.ft-in{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.ft-brand{font-family:var(--mono);font-size:.75rem;color:var(--amber);text-transform:uppercase;letter-spacing:.14em}
+.ft-l{display:flex;gap:2rem;list-style:none}
+.ft-l a{font-family:var(--mono);font-size:.62rem;color:var(--t3);text-decoration:none;text-transform:uppercase;letter-spacing:.08em;transition:color .2s}
+.ft-l a:hover{color:var(--t1)}
+.ft-c{font-family:var(--mono);font-size:.62rem;color:var(--t3)}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.rv.in{opacity:1;transform:translateY(0)}
+
+/* FADE INS */
+@keyframes fi{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.fi{opacity:0;animation:fi .65s ease forwards}
+.fi.d1{animation-delay:.08s}.fi.d2{animation-delay:.2s}
+.fi.d3{animation-delay:.35s}.fi.d4{animation-delay:.5s}
+.fi.d5{animation-delay:.65s}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .s-wrap{grid-template-columns:1fr}
+  .s-num{display:none}
+  .hero-cols{grid-template-columns:1fr}
+  .h-metrics{grid-template-columns:repeat(2,1fr)}
+  .ec{grid-template-columns:1fr;gap:.5rem}
+  .results-bar{grid-template-columns:repeat(2,1fr)}
+  .cases{grid-template-columns:1fr}
+  .cc.w{grid-column:auto;grid-template-columns:1fr}
+  .sk-row{grid-template-columns:1fr}
+  .ct-grid{grid-template-columns:1fr}
+  .ads-sum{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  nav{padding:1rem 1.25rem}
+  .nav-l li:not(:last-child){display:none}
+  section{padding:3rem 1.25rem}
+  h1.name{font-size:clamp(3.5rem,18vw,6rem)}
+  .h-metrics{grid-template-columns:repeat(2,1fr)}
+  .fl-grid{grid-template-columns:1fr}
+  .results-bar{grid-template-columns:1fr}
+  .big-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">RY.studio</a>
+  <div class="nav-r">
+    <ul class="nav-l">
+      <li><a href="#about">About</a></li>
+      <li><a href="#exp">Work</a></li>
+      <li><a href="#liveads">Ads Data</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="avail"><span class="avail-dot"></span>Available for work</div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div id="hero">
+  <div class="hero-tag fi d1">Social Media & Marketing Manager &nbsp;·&nbsp; Lucknow, UP &nbsp;·&nbsp; 2026</div>
+  <h1 class="name fi d2">RITU<br><em>YADAV</em></h1>
+
+  <div class="hero-cols fi d3">
+    <div class="hero-role-block">
+      <div class="hero-role">Social Media & Marketing Manager</div>
+      <div class="hero-loc">5+ Years · Lucknow, UP · rituy3827@gmail.com</div>
+    </div>
+    <p class="hero-stmt">I don't just post content — I build systems that generate measurable revenue. Consistently delivering <strong>₹5L+ monthly</strong> through data-driven campaigns, AI-powered workflows, and creative strategy that achieves <strong>6.13× ROAS</strong>.</p>
+  </div>
+
+  <div class="h-metrics fi d4">
+    <div class="hm">
+      <span class="hm-n" data-c="6.13" data-s="×" data-d="2">—</span>
+      <span class="hm-l">Peak ROAS</span>
+    </div>
+    <div class="hm">
+      <span class="hm-n" data-c="5.92" data-s="L" data-d="2" data-pfx="₹">—</span>
+      <span class="hm-l">Peak Month Revenue</span>
+    </div>
+    <div class="hm">
+      <span class="hm-n" data-c="7000" data-s="+" data-d="0">—</span>
+      <span class="hm-l">Leads Generated</span>
+    </div>
+    <div class="hm">
+      <span class="hm-n" data-c="7.2" data-s="M" data-d="1">—</span>
+      <span class="hm-l">Peak Reel Views</span>
+    </div>
+  </div>
+
+  <div class="hero-ctas fi d5">
+    <a href="#liveads" class="cta-a">View Campaign Data ↓</a>
+    <a href="#contact" class="cta-b">Let's Talk</a>
+  </div>
+
+  <div class="scroll-hint">scroll</div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-t">
+    <span class="mi">Social Media Strategy</span><span class="mi a">·</span>
+    <span class="mi">Meta Ads Manager</span><span class="mi a">·</span>
+    <span class="mi">15.90× ROAS</span><span class="mi a">·</span>
+    <span class="mi">Content Marketing</span><span class="mi a">·</span>
+    <span class="mi">AI Influencer Strategy</span><span class="mi a">·</span>
+    <span class="mi">₹5L+ Monthly Revenue</span><span class="mi a">·</span>
+    <span class="mi">Google Ads</span><span class="mi a">·</span>
+    <span class="mi">Viral Content 7.2M Views</span><span class="mi a">·</span>
+    <span class="mi">E-Commerce Growth</span><span class="mi a">·</span>
+    <span class="mi">Brand Strategy</span><span class="mi a">·</span>
+    <span class="mi">WhatsApp Marketing</span><span class="mi a">·</span>
+    <span class="mi">7000+ Qualified Leads</span><span class="mi a">·</span>
+    <!-- duplicate for seamless loop -->
+    <span class="mi">Social Media Strategy</span><span class="mi a">·</span>
+    <span class="mi">Meta Ads Manager</span><span class="mi a">·</span>
+    <span class="mi">15.90× ROAS</span><span class="mi a">·</span>
+    <span class="mi">Content Marketing</span><span class="mi a">·</span>
+    <span class="mi">AI Influencer Strategy</span><span class="mi a">·</span>
+    <span class="mi">₹5L+ Monthly Revenue</span><span class="mi a">·</span>
+    <span class="mi">Google Ads</span><span class="mi a">·</span>
+    <span class="mi">Viral Content 7.2M Views</span><span class="mi a">·</span>
+    <span class="mi">E-Commerce Growth</span><span class="mi a">·</span>
+    <span class="mi">Brand Strategy</span><span class="mi a">·</span>
+    <span class="mi">WhatsApp Marketing</span><span class="mi a">·</span>
+    <span class="mi">7000+ Qualified Leads</span><span class="mi a">·</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="alt">
+  <div class="s-wrap">
+    <div class="s-num">01 · About</div>
+    <div>
+      <div class="sub-lbl">About</div>
+      <h2>The Person<br>Behind the Metrics</h2>
+      <div class="manifesto rv">
+        <p>I'm a <strong>Social Media & Marketing Manager</strong> with 5+ years of experience building growth engines for brands across E-commerce, Real Estate, Personal Care, and FMCG. My work lives at the intersection of creative storytelling and hard analytical rigour.</p>
+        <br>
+        <p>What separates me from the crowd: I build <strong>measurement frameworks, social listening systems, and AI-powered workflows</strong> that translate directly into revenue. At BioBird, I managed ₹70,000+ monthly ad budgets to generate 499–1,500+ monthly sales — consistently delivering <strong>₹5L+ monthly revenue</strong>.</p>
+        <br>
+        <p>I've produced viral content hitting <strong>7.2M views</strong>, achieved <strong>15.90× ROAS</strong> on single ad creatives, pioneered one of India's first AI influencer campaigns (<strong>@yasminofbahrain</strong>), and led a team of 5 marketing professionals. I don't just read the data — I act on it.</p>
+      </div>
+      <div class="brand-pills rv">
+        <span class="bp">BioBird.in</span>
+        <span class="bp">Imapro.in</span>
+        <span class="bp">Max Digital Academy</span>
+        <span class="bp">Yasmin of Bahrain</span>
+        <span class="bp">Dr. Neha's Clinic</span>
+        <span class="bp">Aiman Developers</span>
+        <span class="bp">The Tummy Store</span>
+      </div>
+      <div class="info-chips rv">
+        <span class="ic">📍 Lucknow, UP</span>
+        <span class="ic">🎓 B.A. Dr. Shakuntala Misra University</span>
+        <span class="ic">💼 Open to full-time & freelance</span>
+        <span class="ic">🤖 AI-Powered Workflows</span>
+        <span class="ic">🌐 Remote-Friendly</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section id="results">
+  <div class="s-wrap">
+    <div class="s-num">02 · Numbers</div>
+    <div>
+      <div class="sub-lbl">By the Numbers</div>
+      <h2>Results That<br>Speak Louder</h2>
+      <div class="results-bar">
+        <div class="rb rv">
+          <span class="rb-n">6.13×</span>
+          <div class="rb-l">Peak Campaign ROAS</div>
+          <div class="rb-c">BioBird.in · Aug 2025 · Verified</div>
+        </div>
+        <div class="rb rv">
+          <span class="rb-n">₹5.92L</span>
+          <div class="rb-l">Revenue in Single Month</div>
+          <div class="rb-c">BioBird.in · August 2025 · Verified</div>
+        </div>
+        <div class="rb rv">
+          <span class="rb-n">1,554</span>
+          <div class="rb-l">Purchases in One Campaign</div>
+          <div class="rb-c">BioBird Hair Oil · Aug 2025</div>
+        </div>
+        <div class="rb rv">
+          <span class="rb-n">7.2M</span>
+          <div class="rb-l">Views on a Single Reel</div>
+          <div class="rb-c">Organic viral content</div>
+        </div>
+        <div class="rb rv">
+          <span class="rb-n">84%</span>
+          <div class="rb-l">Google Profile Growth</div>
+          <div class="rb-c">Dr. Neha's · 11,595 views</div>
+        </div>
+        <div class="rb rv">
+          <span class="rb-n">2.4M+</span>
+          <div class="rb-l">Organic Brand Reach</div>
+          <div class="rb-c">BioBird · +59% impression growth</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="exp" class="alt">
+  <div class="s-wrap">
+    <div class="s-num">03 · Experience</div>
+    <div>
+      <div class="sub-lbl">Experience</div>
+      <h2>Where I've<br>Built My Edge</h2>
+      <div class="exp-list">
+        <div class="ec rv">
+          <div>
+            <div class="ec-co">Aethicz Biolife (BioBird.in)</div>
+            <div class="ec-date">Nov 2024 — Present</div>
+            <span class="ec-badge">Current</span>
+          </div>
+          <div>
+            <div class="ec-role">Social Media Manager</div>
+            <ul class="ec-ul">
+              <li>Drove <strong>499–1,500+ monthly e-commerce sales</strong> generating <strong>₹5L+ monthly revenue</strong> via Meta Ads and organic campaigns</li>
+              <li>Generated <strong>7,000+ qualified leads</strong> and achieved up to <strong>6.13× ROAS</strong> (campaign average) through data-driven audience targeting and optimisation</li>
+              <li>Built social media measurement frameworks across Instagram, Facebook, and YouTube; improved content performance through structured analytics</li>
+              <li>Developed <strong>AI-powered social listening workflows</strong> to track brand mentions, competitors, and emerging market trends in real time</li>
+              <li>Created viral content reaching <strong>1.4M, 5.4M, 6M, and 7.2M views</strong> through reel-first, trend-driven creative strategy</li>
+              <li>Managed influencer partnerships, agency relationships, and led a <strong>team of 5 marketing professionals</strong></li>
+              <li>Drove <strong>2.4M+ organic reach</strong> and 59% impression growth via high-impact 360° brand campaigns</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ec rv">
+          <div>
+            <div class="ec-co">Imapro.in</div>
+            <div class="ec-date">Feb 2024 — Nov 2024</div>
+          </div>
+          <div>
+            <div class="ec-role">Social Media Executive & Copywriter</div>
+            <ul class="ec-ul">
+              <li>Ran Meta campaigns for lead generation and sales; monitored analytics early to surface winning content signals for the creative team</li>
+              <li>Produced audience-centric social content and ad copy; contributed to the <strong>AI influencer branding project @yasminofbahrain</strong>, navigating tone, authenticity, and audience trust</li>
+              <li>Delivered regular performance reports that translated raw metrics into plain-English action plans — what was working, what wasn't, what to test next</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ec rv">
+          <div>
+            <div class="ec-co">Max Digital Academy</div>
+            <div class="ec-date">Jun 2021 — Feb 2024</div>
+          </div>
+          <div>
+            <div class="ec-role">Digital Marketing Executive</div>
+            <ul class="ec-ul">
+              <li>Managed SEO and digital campaigns across channels; tracked performance data to identify highest-ROI activities</li>
+              <li>Handled email marketing end-to-end — designed creatives and analysed results to continuously improve open rates and CTR</li>
+              <li>Introduced a structured <strong>KPI tracking system</strong> that became the team's standard reporting framework</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-lbl" style="margin-top:2.5rem">Freelance</div>
+      <div class="fl-grid">
+        <div class="fl-c rv">
+          <div class="fl-c-t">🌐 Web Designer & Digital Marketer — Dr. Neha's Skin Clinic</div>
+          <p>Built a responsive WordPress site with on-page and local SEO. Achieved Top 10 SERP rankings, #3 on Google My Business, 11,595 profile views (+84%), 2,997 search appearances (+42.6%), and 594 calls directly from Google.</p>
+        </div>
+        <div class="fl-c rv">
+          <div class="fl-c-t">🛒 E-Commerce Manager — The Tummy Store</div>
+          <p>Managed product listings, website updates, and supported Instagram growth. Improved product visibility and store operations to drive consistent online sales.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE ADS DATA -->
+<section id="liveads">
+  <div class="s-wrap">
+    <div class="s-num">04 · Ads Data</div>
+    <div>
+      <div class="sub-lbl">Verified Ad Performance</div>
+      <h2>Real Meta Ads.<br>Real Numbers.</h2>
+      <p style="color:var(--t2);font-size:.95rem;margin-bottom:2rem;max-width:600px;line-height:1.8">Actual campaign results pulled directly from Meta Ads Manager — not estimates. Every rupee, every purchase, every ROAS figure is data from campaigns I planned, executed, and optimised.</p>
+
+      <div class="ads-sum rv">
+        <div class="as-item"><span class="as-n">₹5.92L+</span><span class="as-l">Single Month Revenue</span></div>
+        <div class="as-item"><span class="as-n">6.13×</span><span class="as-l">Peak Campaign ROAS</span></div>
+        <div class="as-item"><span class="as-n">1,653+</span><span class="as-l">Purchases (Aug 2025)</span></div>
+        <div class="as-item"><span class="as-n">2.93M</span><span class="as-l">Impressions (1 Campaign)</span></div>
+      </div>
+
+      <!-- Table 1: Campaign Level -->
+      <div class="t-panel rv">
+        <div class="t-hdr">
+          <div class="t-hdr-l"><span class="ldot"></span>Campaign-Level Performance · Meta Ads Manager · January 2026 (Full Month)</div>
+          <div class="t-hdr-r">Meta Business Suite · Verified Data</div>
+        </div>
+        <div style="overflow-x:auto">
+          <table class="dtbl">
+            <thead>
+              <tr><th>Campaign</th><th class="r">Results</th><th class="r">Cost/Result</th><th class="r">Impressions</th><th class="r">Reach</th><th class="r">Revenue</th><th class="r">ROAS</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="cn">ABO Sales — AI Hits Banner + Video</span></td><td class="r"><span class="rdot">228 purchases</span></td><td class="r">₹80.54</td><td class="r">2,98,040</td><td class="r">1,86,083</td><td class="r"><span class="vl">₹82,970.70</span></td><td class="r"><span class="rb2 rm">4.52×</span></td></tr>
+              <tr><td><span class="cn">Mahi Campaign</span></td><td class="r"><span class="rdot">56 purchases</span></td><td class="r">₹103.84</td><td class="r">71,130</td><td class="r">45,583</td><td class="r"><span class="vl">₹21,283.20</span></td><td class="r"><span class="rb2 rm">3.66×</span></td></tr>
+              <tr><td><span class="cn">Soap Campaign</span></td><td class="r"><span class="rdot">211 purchases</span></td><td class="r">₹75.42</td><td class="r">2,48,010</td><td class="r">1,32,424</td><td class="r"><span class="vl">₹63,610.04</span></td><td class="r"><span class="rb2 rm">4.00×</span></td></tr>
+              <tr><td><span class="cn">New Sales Campaign</span></td><td class="r"><span class="rdot">41 purchases</span></td><td class="r">₹244.56</td><td class="r">1,63,226</td><td class="r">80,890</td><td class="r"><span class="vl">₹14,987.10</span></td><td class="r"><span class="rb2 rl">1.49×</span></td></tr>
+              <tr><td><span class="cn">New Traffic Campaign</span></td><td class="r"><span class="rdot">128 link clicks</span></td><td class="r">₹1.56</td><td class="r">2,692</td><td class="r">1,833</td><td class="r"><span class="rna">—</span></td><td class="r"><span class="rna">—</span></td></tr>
+              <tr class="tr-tot"><td><span class="cn">TOTAL</span></td><td class="r">536 purchases</td><td class="r">—</td><td class="r">7,83,098</td><td class="r">4,46,813</td><td class="r">₹1,82,851.04</td><td class="r"><span class="rb2 rm">4.52× peak</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Table 2: Ad Set Breakdown -->
+      <div class="t-panel rv">
+        <div class="t-hdr">
+          <div class="t-hdr-l"><span class="ldot"></span>Ad Set Breakdown · Soap Campaign · 15 Feb 2026 (5 Ad Sets · ₹200/day each)</div>
+          <div class="t-hdr-r">A/B Tested · Best creative identified</div>
+        </div>
+        <div style="overflow-x:auto">
+          <table class="dtbl">
+            <thead>
+              <tr><th>Ad Set</th><th class="r">Purchases</th><th class="r">Cost/Purchase</th><th class="r">Impressions</th><th class="r">Reach</th><th class="r">Revenue</th><th class="r">ROAS</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="cn">Ad Set 2 ⭐ Best Performer</span></td><td class="r"><span class="vl">58</span></td><td class="r"><span class="vl">₹77.26</span></td><td class="r">1,16,032</td><td class="r">93,259</td><td class="r"><span class="vl">₹17,262.55</span></td><td class="r"><span class="rb2 rh">3.85×</span></td></tr>
+              <tr><td><span class="cn">Ad Set 3</span></td><td class="r">51</td><td class="r">₹86.31</td><td class="r">64,239</td><td class="r">48,367</td><td class="r">₹15,205.70</td><td class="r"><span class="rb2 rm">3.45×</span></td></tr>
+              <tr><td><span class="cn">Ad Set 1</span></td><td class="r">54</td><td class="r">₹86.74</td><td class="r">1,20,049</td><td class="r">93,927</td><td class="r">₹14,680.10</td><td class="r"><span class="rb2 rm">3.13×</span></td></tr>
+              <tr><td><span class="cn">Ad Set 5</span></td><td class="r">57</td><td class="r">₹108.62</td><td class="r">1,81,043</td><td class="r">1,38,027</td><td class="r">₹16,766.70</td><td class="r"><span class="rb2 rm">2.71×</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="note-txt rv">💡 Ad Set 2 identified as top performer (3.85× ROAS, lowest CPP at ₹77.26). Budget scaled into this set while pausing lower performers — demonstrating hands-on optimisation that maximises return on every rupee spent.</p>
+
+      <!-- Table 3: Aug 2025 Ad Level -->
+      <div class="t-panel rv" style="margin-top:1.5rem">
+        <div class="t-hdr">
+          <div class="t-hdr-l"><span class="ldot"></span>Ad-Level Performance · Campaign Report · 3 Aug 2025</div>
+          <div class="t-hdr-r">Avg ROAS: 7.17×</div>
+        </div>
+        <div style="overflow-x:auto">
+          <table class="dtbl">
+            <thead>
+              <tr><th>Ad Variant</th><th class="r">Purchases</th><th class="r">Cost/Purchase</th><th class="r">Amount Spent</th><th class="r">Impressions</th><th class="r">Reach</th><th class="r">ROAS</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="cn">Variant 1</span></td><td class="r">23</td><td class="r">₹45.33</td><td class="r">₹1,042.51</td><td class="r">28,363</td><td class="r">27,576</td><td class="r"><span class="rb2 rh">7.99×</span></td></tr>
+              <tr><td><span class="cn">Variant 2</span></td><td class="r">8</td><td class="r">₹85.49</td><td class="r">₹683.90</td><td class="r">14,743</td><td class="r">14,216</td><td class="r"><span class="rb2 rh">5.12×</span></td></tr>
+              <tr><td><span class="cn">Variant 3</span></td><td class="r">8</td><td class="r">₹59.70</td><td class="r">₹477.63</td><td class="r">7,983</td><td class="r">7,738</td><td class="r"><span class="rb2 rh">5.47×</span></td></tr>
+              <tr><td><span class="cn">Variant 4 ⭐ Best Performer</span></td><td class="r"><span class="vl">10</span></td><td class="r"><span class="vl">₹37.05</span></td><td class="r">₹370.54</td><td class="r">6,978</td><td class="r">6,789</td><td class="r"><span class="rb2 re">10.80×</span></td></tr>
+              <tr class="tr-tot"><td><span class="cn">TOTAL</span></td><td class="r">49</td><td class="r">₹52.54 avg</td><td class="r">₹2,574.58</td><td class="r">58,067</td><td class="r">55,737</td><td class="r"><span class="rb2 re">7.17× avg</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Table 4: Jun 2025 Ad Level -->
+      <div class="t-panel rv">
+        <div class="t-hdr">
+          <div class="t-hdr-l"><span class="ldot"></span>Ad-Level Performance · Campaign Report · 21 Jun 2025</div>
+          <div class="t-hdr-r">Avg ROAS: 8.39×</div>
+        </div>
+        <div style="overflow-x:auto">
+          <table class="dtbl">
+            <thead>
+              <tr><th>Ad Variant</th><th class="r">Purchases</th><th class="r">Cost/Purchase</th><th class="r">Amount Spent</th><th class="r">Impressions</th><th class="r">Reach</th><th class="r">ROAS</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="cn">Variant A</span></td><td class="r">5</td><td class="r">₹37.68</td><td class="r">₹188.39</td><td class="r">5,183</td><td class="r">5,133</td><td class="r"><span class="rb2 rh">7.79×</span></td></tr>
+              <tr><td><span class="cn">Variant B</span></td><td class="r">5</td><td class="r">₹21.45</td><td class="r">₹107.26</td><td class="r">2,947</td><td class="r">2,947</td><td class="r"><span class="rb2 re">13.79×</span></td></tr>
+              <tr><td><span class="cn">Variant C</span></td><td class="r"><span class="rna">—</span></td><td class="r"><span class="rna">—</span></td><td class="r">₹105.91</td><td class="r">2,951</td><td class="r">2,816</td><td class="r"><span class="rna">—</span></td></tr>
+              <tr><td><span class="cn">Variant D</span></td><td class="r">4</td><td class="r">₹46.69</td><td class="r">₹186.75</td><td class="r">5,312</td><td class="r">5,143</td><td class="r"><span class="rb2 rh">5.95×</span></td></tr>
+              <tr><td><span class="cn">Variant E ⭐ Best Performer</span></td><td class="r"><span class="vl">7</span></td><td class="r"><span class="vl">₹18.83</span></td><td class="r">₹131.80</td><td class="r">3,892</td><td class="r">3,728</td><td class="r"><span class="rb2 re">15.90×</span></td></tr>
+              <tr><td><span class="cn">Variant F</span></td><td class="r">5</td><td class="r">₹37.04</td><td class="r">₹185.22</td><td class="r">5,651</td><td class="r">5,552</td><td class="r"><span class="rb2 rh">7.79×</span></td></tr>
+              <tr class="tr-tot"><td><span class="cn">TOTAL</span></td><td class="r">26</td><td class="r">₹34.82 avg</td><td class="r">₹905.33</td><td class="r">25,936</td><td class="r">24,367</td><td class="r"><span class="rb2 re">8.39× avg</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="note-txt rv">🚀 Variant E (Jun 2025) and Variant 4 (Aug 2025) were the top-performing creatives across their respective campaigns — demonstrating consistent ability to identify and scale winning ad creatives through data analysis and A/B testing.</p>
+
+      <!-- Table 5: Aug 2025 Full Month Campaigns -->
+      <div class="t-panel rv" style="margin-top:1.5rem">
+        <div class="t-hdr">
+          <div class="t-hdr-l"><span class="ldot"></span>Campaign-Level Performance · August 2025 (Full Month · 1 Aug – 31 Aug 2025)</div>
+          <div class="t-hdr-r">Biggest Month · ₹5,92,161 Total Revenue</div>
+        </div>
+        <div style="overflow-x:auto">
+          <table class="dtbl">
+            <thead>
+              <tr><th>Campaign</th><th class="r">Purchases</th><th class="r">Cost/Purchase</th><th class="r">Impressions</th><th class="r">Amount Spent</th><th class="r">Revenue</th><th class="r">ROAS</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="cn">BioBird Hair Oil Sale — 29 July 2025 ⭐</span></td>
+                <td class="r"><span class="vl">1,554</span></td>
+                <td class="r"><span class="vl">₹53.35</span></td>
+                <td class="r"><span class="vl">29,34,569</span></td>
+                <td class="r">₹82,904.47</td>
+                <td class="r"><span class="vl">₹5,55,317.60</span></td>
+                <td class="r"><span class="rb2 rh">6.70×</span></td>
+              </tr>
+              <tr>
+                <td><span class="cn">BioBird Hair Oil Sale — Scaling</span></td>
+                <td class="r">77</td>
+                <td class="r">₹56.91</td>
+                <td class="r">98,251</td>
+                <td class="r">₹4,381.81</td>
+                <td class="r">₹27,569.90</td>
+                <td class="r"><span class="rb2 rh">6.29×</span></td>
+              </tr>
+              <tr>
+                <td><span class="cn">Sunscreen ABO Prospecting</span></td>
+                <td class="r">22</td>
+                <td class="r">₹426.27</td>
+                <td class="r">54,264</td>
+                <td class="r">₹9,377.87</td>
+                <td class="r">₹9,274.00</td>
+                <td class="r"><span class="rb2 rl">0.99×</span></td>
+              </tr>
+              <tr class="tr-tot">
+                <td><span class="cn">TOTAL — August 2025</span></td>
+                <td class="r">1,653 purchases</td>
+                <td class="r">—</td>
+                <td class="r">30,87,084</td>
+                <td class="r">₹96,664.15</td>
+                <td class="r">₹5,92,161.50</td>
+                <td class="r"><span class="rb2 rh">6.13× avg</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="note-txt rv">📈 The BioBird Hair Oil campaign (Aug 2025) is the single largest campaign result — <strong style="color:var(--amber)">1,554 purchases, ₹5,55,317.60 revenue, and 29.3 lakh impressions</strong> from one campaign. Scaled a second campaign alongside it, confirming the strategy was repeatable. The Sunscreen prospecting campaign was a test at low budget; insights from it informed future creative direction.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="work" class="alt">
+  <div class="s-wrap">
+    <div class="s-num">05 · Case Studies</div>
+    <div>
+      <div class="sub-lbl">Case Studies</div>
+      <h2>Proof of Work</h2>
+      <div class="cases">
+        <!-- BioBird Featured -->
+        <div class="cc w rv">
+          <div>
+            <div class="cc-eye">BioBird.in · E-Commerce, Brand Strategy & Performance Marketing</div>
+            <div class="cc-t">Turning a Skincare Brand into a Revenue Machine</div>
+            <p class="cc-d">Led end-to-end social media and performance marketing for BioBird. Built a reel-first content system, managed influencer and creator partnerships, ran Meta Ads campaigns, and developed AI-powered social listening workflows — all wired together to drive consistent e-commerce growth and brand awareness.</p>
+            <div class="cc-nums">
+              <div class="ccn"><span>₹5L+</span><span>Monthly Revenue</span></div>
+              <div class="ccn"><span>7,000+</span><span>Leads</span></div>
+              <div class="ccn"><span>₹70K+</span><span>Monthly Ad Spend</span></div>
+            </div>
+            <div class="cc-tags">
+              <span class="cct">Meta Ads</span><span class="cct">Content Strategy</span>
+              <span class="cct">Influencer Mgmt</span><span class="cct">AI Listening</span>
+              <span class="cct">Analytics</span><span class="cct">Team Leadership</span>
+            </div>
+          </div>
+          <div class="big-grid">
+            <div class="bg-item"><span>6.13×</span><span>Peak Campaign ROAS</span></div>
+            <div class="bg-item"><span>7.2M</span><span>Views on Best Reel</span></div>
+            <div class="bg-item"><span>2.4M+</span><span>Organic Reach</span></div>
+            <div class="bg-item"><span>+59%</span><span>Impression Growth</span></div>
+          </div>
+        </div>
+        <!-- Dr. Neha's -->
+        <div class="cc rv">
+          <div class="cc-eye">Dr. Neha's Skin Clinic · SEO & Local Digital Marketing</div>
+          <div class="cc-t">From Invisible to #3 on Google Maps</div>
+          <p class="cc-d">Designed a responsive WordPress site with on-page and local SEO. Optimised Google Business Profile with high-intent dermatology keywords and mobile-first content to establish the clinic as the go-to dermatologist in Bijnor.</p>
+          <div class="cc-nums">
+            <div class="ccn"><span>11,595</span><span>Profile Views (+84%)</span></div>
+            <div class="ccn"><span>594</span><span>Calls from Google</span></div>
+            <div class="ccn"><span>2,997</span><span>Search Appearances</span></div>
+          </div>
+          <div class="cc-tags">
+            <span class="cct">WordPress</span><span class="cct">On-page SEO</span>
+            <span class="cct">Google My Business</span><span class="cct">Local SEO</span>
+          </div>
+        </div>
+        <!-- AI Influencer -->
+        <div class="cc rv">
+          <div class="cc-eye">Imapro.in · AI Influencer Development & Performance Marketing</div>
+          <div class="cc-t">Building @yasminofbahrain — India's AI Influencer</div>
+          <p class="cc-d">Contributed to development and branding of one of India's early AI influencer projects. Carefully navigated tone, authenticity, and audience trust. Simultaneously ran Meta Ads campaigns for lead generation and built personal branding content for leadership profiles.</p>
+          <div class="cc-nums">
+            <div class="ccn"><span>AI-First</span><span>Influencer Strategy</span></div>
+            <div class="ccn"><span>B2B+D2C</span><span>Lead Generation</span></div>
+          </div>
+          <div class="cc-tags">
+            <span class="cct">AI Influencer</span><span class="cct">Personal Branding</span>
+            <span class="cct">Meta Campaigns</span><span class="cct">Content Creation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="s-wrap">
+    <div class="s-num">06 · Skills</div>
+    <div>
+      <div class="sub-lbl">Skills & Tools</div>
+      <h2>My Full Toolkit</h2>
+      <div class="skills-body">
+        <div class="sk-row rv">
+          <div class="sk-cat">Paid Media & Ads</div>
+          <div class="sk-tags">
+            <span class="sk">Meta Ads Manager</span><span class="sk">Google Ads</span>
+            <span class="sk">Amazon Ads</span><span class="sk">Campaign Strategy</span>
+            <span class="sk">Audience Targeting</span><span class="sk">ROAS Optimization</span>
+            <span class="sk">Ad Copywriting</span><span class="sk">A/B Testing</span>
+          </div>
+        </div>
+        <div class="sk-row rv">
+          <div class="sk-cat">Organic & Content</div>
+          <div class="sk-tags">
+            <span class="sk">Social Media Strategy</span><span class="sk">Reel / Video Strategy</span>
+            <span class="sk">Content Planning</span><span class="sk">Copywriting</span>
+            <span class="sk">Brand Storytelling</span><span class="sk">UGC Strategy</span>
+            <span class="sk">Influencer Management</span>
+          </div>
+        </div>
+        <div class="sk-row rv">
+          <div class="sk-cat">Analytics & Data</div>
+          <div class="sk-tags">
+            <span class="sk">Google Analytics</span><span class="sk">Meta Business Suite</span>
+            <span class="sk">Instagram Insights</span><span class="sk">YouTube Studio</span>
+            <span class="sk">Semrush</span><span class="sk">Google Search Console</span>
+            <span class="sk">Sprout Social</span><span class="sk">Brandwatch</span>
+          </div>
+        </div>
+        <div class="sk-row rv">
+          <div class="sk-cat">AI & Automation</div>
+          <div class="sk-tags">
+            <span class="sk">Midjourney</span><span class="sk">ElevenLabs</span>
+            <span class="sk">Runway ML</span><span class="sk">ChatGPT</span>
+            <span class="sk">Claude AI</span><span class="sk">Gemini</span>
+            <span class="sk">AI Social Listening</span>
+            <span class="sk">Workflow Automation</span><span class="sk">AI Influencer Strategy</span>
+          </div>
+        </div>
+        <div class="sk-row rv">
+          <div class="sk-cat">E-Commerce & Web</div>
+          <div class="sk-tags">
+            <span class="sk">Shopify</span><span class="sk">Amazon Seller Central</span>
+            <span class="sk">Flipkart Seller Hub</span><span class="sk">WordPress</span>
+            <span class="sk">FlexiFunnels</span><span class="sk">Canva</span>
+            <span class="sk">Google Merchant Center</span>
+          </div>
+        </div>
+        <div class="sk-row rv">
+          <div class="sk-cat">Social & CRM</div>
+          <div class="sk-tags">
+            <span class="sk">Buffer</span><span class="sk">Hootsuite</span>
+            <span class="sk">Zoho Social</span><span class="sk">Aisensy</span>
+            <span class="sk">Wati</span><span class="sk">WhatFlow</span>
+            <span class="sk">WhatsApp Marketing</span><span class="sk">Google My Business</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="alt">
+  <div class="s-wrap">
+    <div class="s-num">07 · Contact</div>
+    <div class="ct-wrap">
+      <div class="sub-lbl">Contact</div>
+      <h2>Let's Build Something<br>That Converts</h2>
+      <p>Open to full-time roles, contract work, and freelance opportunities in social media management, performance marketing, and digital strategy. Reply within 24h.</p>
+      <div class="ct-grid">
+        <a href="mailto:rituy3827@gmail.com" class="ct-item">
+          <div class="ct-icon">📧</div>
+          <div class="ct-info"><div class="ct-lbl">Email</div><div class="ct-val">rituy3827@gmail.com</div></div>
+        </a>
+        <a href="tel:8318262120" class="ct-item">
+          <div class="ct-icon">📞</div>
+          <div class="ct-info"><div class="ct-lbl">Phone</div><div class="ct-val">8318262120</div></div>
+        </a>
+        <a href="https://www.linkedin.com/in/ritu-yadav-975b9929b" target="_blank" class="ct-item">
+          <div class="ct-icon">💼</div>
+          <div class="ct-info"><div class="ct-lbl">LinkedIn</div><div class="ct-val">ritu-yadav-975b9929b</div></div>
+        </a>
+        <div class="ct-item">
+          <div class="ct-icon">📍</div>
+          <div class="ct-info"><div class="ct-lbl">Location</div><div class="ct-val">Lucknow, Uttar Pradesh</div></div>
+        </div>
+      </div>
+      <a href="https://wa.me/918423203248" target="_blank" class="cta-a" style="display:inline-flex">💬 Start a Conversation →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-in">
+    <span class="ft-brand">Ritu Yadav</span>
+    <ul class="ft-l">
+      <li><a href="#about">About</a></li>
+      <li><a href="#exp">Experience</a></li>
+      <li><a href="#liveads">Ads Data</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <span class="ft-c">© 2026 · Social Media & Marketing Manager · Built to convert</span>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const rvEls = document.querySelectorAll('.rv');
+const ro = new IntersectionObserver(e => { e.forEach(x => { if(x.isIntersecting) x.target.classList.add('in'); }); }, { threshold: 0.08 });
+rvEls.forEach(el => ro.observe(el));
+
+// Counter animation
+function runC(el) {
+  const t = parseFloat(el.dataset.c);
+  const s = el.dataset.s || '';
+  const p = el.dataset.pfx || '';
+  const d = parseInt(el.dataset.d) || 0;
+  const dur = 1400, steps = 55;
+  let step = 0;
+  const timer = setInterval(() => {
+    step++;
+    const v = t * (step / steps);
+    const fmt = d > 0 ? v.toFixed(d) : Math.round(v).toLocaleString();
+    el.textContent = p + fmt + s;
+    if (step >= steps) {
+      el.textContent = p + (d > 0 ? t.toFixed(d) : t.toLocaleString()) + s;
+      clearInterval(timer);
+    }
+  }, dur / steps);
+}
+const ctrs = document.querySelectorAll('[data-c]');
+const co = new IntersectionObserver(e => {
+  e.forEach(x => { if(x.isIntersecting && !x.target.dataset.done) { x.target.dataset.done = '1'; runC(x.target); } });
+}, { threshold: 0.5 });
+ctrs.forEach(c => co.observe(c));
+
+// Active nav
+const secs = document.querySelectorAll('section[id],div[id]');
+const nls = document.querySelectorAll('.nav-l a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  secs.forEach(s => { if (window.scrollY >= s.offsetTop - 130) cur = s.id; });
+  nls.forEach(a => { a.style.color = a.getAttribute('href') === '#' + cur ? 'var(--t1)' : ''; });
+}, { passive: true });
+</script>
+</body>
+</html>
